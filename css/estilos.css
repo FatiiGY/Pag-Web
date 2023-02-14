@@ -1,0 +1,168 @@
+/* Tipo de letra universal */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+    --padding-container: 100px  0;
+    --color-title: #f62672;
+}
+
+
+/* Se crea un selector de "body" para pegar la fuente a lo que se necesite */ 
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* background: #000; */
+    padding: var(--padding-container);
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-width:600px ;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color:azure
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #86143c8c 10%, #ffffff8c 90%),url('../images/fondo.png');
+    background-size: cover;
+    clip-path: polygon(0% 0%, 100% 0, 100% 81%, 54% 100%, 0 82%);
+    z-index: -1;
+}
+
+.hero_paragraph{
+    color:azure;
+    font-size: 1.3rem;
+}
+
+
+.nav{
+    --padding-container:0
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav_title{
+    font-weight: 300;
+}
+
+.nav_items{
+    list-style: none;
+}
+
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav_link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav_links{
+    color: azure;
+    text-decoration: none;
+}
+
+.hero_container{
+    max-width: 800px;
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    text-align: center;
+}
+
+.hero_title{
+    margin-bottom: 20px;
+}
+
+.cta{
+    display: inline-block;
+    background-color: #912576;
+    justify-self: center;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 40px;
+}
+
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragaph{
+    line-height: 1.7;
+    font-size: 1.2rem;
+}
+
+.about_main{
+    padding: top;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: lem;
+    overflow: hidden;
+    /* columnas dinamicas  */
+    grid-template-columns: repeat(auto-fit, minmax(260px,auto));
+}
+
+.about_icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 240px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.knowledge{
+    background-color: #ffffff;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 32px ), repeating-linear-gradient( #ffdffc55, #ffdffc );
+    overflow: hidden;
+}
+
+.knowledge_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.knowledge_paragaph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}

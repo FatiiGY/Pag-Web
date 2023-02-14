@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheems</title>
+   
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+
+
+</head>
+<body onload="mostrarSaludo()">
+    <header class="hero">
+        <nav class="nav container">
+
+            <div>
+                <h2 class="nav_title"> Gore </h2>
+            </div>
+
+            <ul class="nav_link nav_link--menu">
+                <li class="nav_items">
+                    <a href="#" class="nav_links">Inicio</a>
+                </li>
+                
+                <li class="nav_items">
+                    <a href="#" class="nav_links">About me</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#" class="nav_links">Contact</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#" class="nav_links">Blog</a>
+                </li>
+
+                <img src="./images/close.svg" alt="" class="nav_close">
+            </ul>
+
+
+            <div class="nav_menu">
+                <img src="./images/menu.sgv" class="nav_img" alt="">
+            </div>
+
+        </nav>
+
+        <section class="hero_container container">
+
+            <!-- <div id="txtsaludo"></div> -->
+
+            <h1 id="txtsaludo"></h1>
+            <!-- <h1 class="hero_title">mostrarSaludo()</h1> -->
+            <p class="hero_paragraph"> This is my blog, you can find some information about me and my projects, if you are interested in contacting me please send me a message on any of my social networks c:
+
+            </p>
+            
+            <!-- ESTO SE COMENTA PQ NO SE USAAAAAAAAAAAAAAAAAAAAAA
+            BOTONES
+            <a href="#" class="cta">Cliceame c:</a>
+
+            <div style="margin:20px"> holaa</div> -->
+        </section>
+    </header>
+    
+
+    <main>
+        <section class="container about">
+            <h2 class="subtitle">Projects</h2>
+            <!-- modificar -->
+            <p class="about_paragaph">These are some of the projects I have done at school or in a free time, you can see the code and download it if you want</p>
+
+
+            <div class="about_main">
+
+                <article class="about_icons">
+                    <img src="la ruta" alt="about_icons">
+                    <h3 class="about_title"> prueba probando 1</h3>
+                    <p class="about_paragaph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsa aperiam doloribus odio, nemo enim. Numquam voluptate pariatur assumenda itaque autem harum nam dignissimos quia? Repellat molestias minus similique nostrum?</p>
+                </article>
+
+                <article class="about_icons">
+                    <img src="la ruta" alt="about_icons">
+                    <h3 class="about_title"> prueba probando 2</h3>
+                    <p class="about_paragaph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsa aperiam doloribus odio, nemo enim. Numquam voluptate pariatur assumenda itaque autem harum nam dignissimos quia? Repellat molestias minus similique nostrum?</p>
+                </article>
+
+                <article class="about_icons">
+                    <img src="la ruta" alt="about_icons">
+                    <h3 class="about_title"> prueba probando 3</h3>
+                    <p class="about_paragaph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsa aperiam doloribus odio, nemo enim. Numquam voluptate pariatur assumenda itaque autem harum nam dignissimos quia? Repellat molestias minus similique nostrum?</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="knowledge">
+            <div class="knowledge_container container">
+                <div class="knowledge_texts">
+                    <h2 class="subtitle">About me</h2>
+                    <p class="knowledge_paragaph">My name is Fatima Garcia or Gore Garcia, you can identify me for one of my nicknames, i really love the boy band named Morat, if you have the opportunity to listen them, please do it. I like design and </p>
+                    <a href="#" class="cta">hola</a>
+                </div>
+                
+                <figure class="knowledge_picture">
+                    <img src="la ruta" class="knowledge_img">
+                </figure>
+
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+   <!-- Para dar un saludo segun la hora del dia -->
+      <script type="text/javascript">
+
+        function mostrarSaludo(){
+
+          fecha = new Date(); 
+          hora = fecha.getHours();
+
+          if(hora >= 0 && hora < 12){texto = "Hi, Good Morning";}
+
+          if(hora >= 12 && hora < 18){texto = "Hi, Good Afternoon";}
+
+          if(hora >= 18 && hora < 24){texto = "Hola, Good Nigth c:";  }
+
+          document.getElementById('txtsaludo').innerHTML = texto;
+        }
+
+      </script>
+
+</body>
+
+</html>
